@@ -1,16 +1,15 @@
-const logo = document.getElementyId("logo");
-const sidebar = document.getElementyId("sidebar");
-
-const buttonCarousel = document.querySelector("btn_prop");
-
-document.querySelectorAll(".btn-prop").addEventListener("pressed", function() {
-    const buttonInnerHTML = this.innerHTML;
-    makeSound(buttonInnerHTML);
-    buttonAnimation(buttonInnerHTML);
+document.getElementsByClassName("openbtn")[0].addEventListener("click", function() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("mySidebar").style.zIndex = 3;
+    document.getElementById("menu").style.overflow = "hidden";
+    document.getElementsByClassName("openbtn")[0].style.opacity = "0";
+    document.getElementById("menu").style.opacity = "0.8";
 });
-}
 
-document.addEventListener("keypress", function(event) {
-    makeSound(event.key);
-    buttonAnimation(event.key);
+document.getElementsByClassName("closebtn")[0].addEventListener("click", function() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("mySidebar").style.zIndex = 1;
+    document.getElementsByClassName("openbtn")[0].style.opacity = "1";
+    document.getElementById("menu").style.opacity = "1";
+    document.getElementById("menu").style.overflow = "visible";
 });
