@@ -1,4 +1,4 @@
-@media (min-width: 600px) {
+@media (min-width: 450px) {
     body {
         background-color: #222222 !important;
         margin: 0;
@@ -30,15 +30,15 @@
         overflow: hidden;
         transition: 0.5s;
         padding-top: 60px;
-        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.400, 0.000, 0.200, 1.000);
     }
     .sidebar a {
         padding: 8px 8px 8px 60px;
+        display: flex;
         text-decoration: none;
         font-size: 20px;
         color: #222222;
-        display: block;
-        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.400, 0.000, 0.200, 1.000);
     }
     .sidebar a:hover {
         color: #045757;
@@ -47,7 +47,26 @@
         position: absolute;
         top: 0;
         right: 25px;
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex: 1 0 auto;
+        padding: 0em 2.25em 1.75em 2.25em;
+        font-size: 1em;
+        transition-timing-function: cubic-bezier(0.400, 0.000, 0.200, 1.000);
+        position: absolute;
+        bottom: 100px;
+        left: 20px;
+    }
+    .social-icon {
+        letter-spacing: 10px;
+    }
+    .social-icon:hover {
+        color: #045757;
     }
     .carousel {
         position: static;
@@ -99,5 +118,38 @@
         border-color: #e4e4e4;
         border-radius: 40px;
         border-width: 2.5px;
+    }
+    #footer {
+        margin-bottom: 100px;
+    }
+    #footer div {
+        height: 20px;
+    }
+    #footer hr {
+        color: #e4e4e4;
+        width: 95%;
+        height: 5px;
+        margin: auto;
+        position: relative;
+        margin-top: 30px;
+        border-radius: 5%;
+    }
+    #footer .copyright {
+        color: #e4e4e4;
+        position: relative;
+        left: 33px;
+        top: 5px;
+        font-size: 0.8rem;
+        width: 30%;
+        font-weight: bold;
+    }
+    #footer .socialF {
+        color: #e4e4e4;
+        padding-top: 0.5rem;
+        text-align: right;
+        position: relative;
+        top: 10px;
+        right: 30px;
+        letter-spacing: 20px;
     }
 }
